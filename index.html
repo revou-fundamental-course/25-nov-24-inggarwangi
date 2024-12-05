@@ -19,31 +19,44 @@
            
             <!-- Main Form -->
             <form>
+
                 <h2>Input Data</h2>
+
+                <div data-role="main" class="ui-content">
+                    <form method="post" action="/action_page_post.php">
+                      <legend>Jenis Kelamin:</legend>
+                </div>
+                    
+                <div class="form-gender">
+                    <label for="pria"> Pria</label>
+                    <input type="radio" name="gender" id="pria" value="pria" checked>
+                    <label for="wanita">Wanita</label>
+                    <input type="radio" name="gender" id="wanita" value="wanita">
+                </div>
 
                 <div class="form-item">
                     <label for="berat-badan-input">
                         Berat Badan (kg):
                     </label>
-                    <input type="number" id="berat-badan-input" />
+                    <input type="number" id="berat-badan-input" required />
                 </div>
 
                 <div class="form-item">
                     <label for="usia-input">
                         Usia / Umur :
                     </label>
-                    <input type="number" id="usia-input" />
+                    <input type="number" id="usia-input" required />
                 </div>
 
                 <div class="form-item">
                     <label for="tinggi-badan-input">
                         Tinggi Badan (cm):
                     </label>
-                    <input type="number" id="tinggi-badan-input" />
+                    <input type="number" id="tinggi-badan-input" required />
                 </div>
 
                 <div class="form-button-container">
-                    <button class="bg-dark-olive-green color-white">Hitung BMI</button>
+                    <button type="button" class="bg-dark-olive-green color-white" onclick="validateForm();">Hitung BMI</button>
                     <button class="bg-brown color-white">Reset</button>
                 </div>
             </form>
@@ -83,5 +96,7 @@
     <footer>
         <p>Made by Inggar@2024</p>
     </footer>
+
+    <script src="js\script.js"></script>
 </body>
 </html>
